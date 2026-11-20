@@ -24,6 +24,8 @@ students.
 - [Feasibility brief](docs/feasibility.md): design, safety, privacy, phased plan, market scan
 - [Hardware, software and price breakdown](docs/bom.md)
 - [Concept model](cad/concept_robot.py): Blender script; renders in [`renders/`](renders/)
+- [Print guide for the coach base](docs/print-guide.md)
+- [Publishing the lab site](docs/site-setup.md)
 
 ## Concept model
 
@@ -51,3 +53,9 @@ separately in code-based CAD (build123d), with exact dimensions.
 ## Licences (proposed)
 
 Code: Apache-2.0 · Hardware: CERN-OHL-P-2.0 · Documentation and renders: CC BY 4.0
+
+## Printable parts
+
+- **Coach base v0.1** (fit test): electronics base, lid, table clamp, knob, pad.
+  STL/STEP files are in [`cad/out/`](cad/out/), made by [`cad/coach_base.py`](cad/coach_base.py).
+  How to print and assemble: [docs/print-guide.md](docs/print-guide.md).
