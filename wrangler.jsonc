@@ -1,0 +1,12 @@
+// Cloudflare Workers config for the lab site (lab.toontheology.com).
+// Publishes the static page in site/ and copies the renders in at build time.
+{
+  "name": "assistiverobot",
+  "compatibility_date": "2026-11-01",
+  "build": {
+    "command": "mkdir -p site/renders && cp renders/*.png site/renders/"
+  },
+  "assets": {
+    "directory": "./site"
+  }
+}
