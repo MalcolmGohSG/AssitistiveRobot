@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kawan Robot Lab</title>
+<meta name="description" content="An open assistive robot for non-verbal autistic learners in Singapore SPED schools. Concept stage: designs, costs and a place to give feedback.">
+<style>
+  :root {
+    --bg: #f7f6f2; --fg: #1d1f22; --muted: #565b61; --card: #ffffff;
+    --line: #dcd8cf; --accent: #2f6f6b; --accent-fg: #ffffff; --focus: #b35c00;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #16181b; --fg: #eceae4; --muted: #a9adb3; --card: #1f2226;
+      --line: #33373d; --accent: #6fbdb6; --accent-fg: #0d1112; --focus: #ffb35c;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #16181b; --fg: #eceae4; --muted: #a9adb3; --card: #1f2226;
+    --line: #33373d; --accent: #6fbdb6; --accent-fg: #0d1112; --focus: #ffb35c;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg);
+         font: 17px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  a { color: var(--accent); }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+  .skip { position: absolute; left: -999px; }
+  .skip:focus { left: 16px; top: 16px; background: var(--card); padding: 8px 12px; }
+  header, main, footer { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+  header { padding-top: 40px; }
+  h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 8px; }
+  .lede { color: var(--muted); font-size: 1.1rem; margin: 0 0 24px; }
+  .status { display: inline-block; border: 1px solid var(--line); border-radius: 999px;
+            padding: 2px 12px; font-size: .9rem; color: var(--muted); }
+  figure { margin: 24px 0; }
+  img { max-width: 100%; height: auto; display: block; border-radius: 12px; border: 1px solid var(--line); }
+  figcaption { color: var(--muted); font-size: .95rem; margin-top: 8px; }
+  .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px 20px; }
+  .card h3 { margin: 0 0 6px; font-size: 1.1rem; }
+  .card p { margin: 0; color: var(--muted); }
+  .btn { display: inline-block; background: var(--accent); color: var(--accent-fg);
+         padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: 600; margin: 4px 8px 4px 0; }
+  ul.rules li { margin-bottom: 6px; }
+  footer { color: var(--muted); font-size: .9rem; padding-top: 32px; padding-bottom: 40px; }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+  <span class="status">Concept stage · November 2026 · nothing built yet</span>
+  <h1>Kawan: an open assistive robot</h1>
+  <p class="lede">For non-verbal autistic students in Singapore SPED schools: coaching daily-living and job
+  skills step by step, noticing when a learner needs more support, and staying calm and safe during a meltdown.</p>
+</header>
+
+<main id="main">
+  <figure>
+    <img src="renders/front_three_quarter.png" width="1400" height="1050"
+         alt="Concept render: a white robot about 1.3 metres tall on a round wheeled base with a soft teal bumper ring.
+              It has a screen face with a smile, three large coloured buttons on its chest, and two slim arms,
+              one placing chopsticks beside a bowl on a table.">
+    <figcaption>Concept render, proportions only. Made from a Blender script in the repository.</figcaption>
+  </figure>
+
+  <h2>The plan</h2>
+  <div class="grid">
+    <div class="card"><h3>A · Workstation coach</h3>
+      <p>A tabletop robot at a structured work desk. It shows each step, checks the work tray with a camera,
+      and adjusts its prompts. Comes first.</p></div>
+    <div class="card"><h3>B · Learning lab</h3>
+      <p>A low-cost open-source robot with arms that learns table-setting with chopsticks and tidying by
+      demonstration. Lab only, never with students.</p></div>
+    <div class="card"><h3>C · Full-size robot</h3>
+      <p>Mobile base, lift mast, two arms and a guide handle. Cooks through appliances, and guides people to
+      stairs but never carries them.</p></div>
+  </div>
+
+  <h2>Read and download</h2>
+  <p>
+    <a class="btn" href="https://github.com/MalcolmGohSG/AssitistiveRobot/blob/main/docs/feasibility.md">Feasibility brief</a>
+    <a class="btn" href="https://github.com/MalcolmGohSG/AssitistiveRobot/blob/main/docs/bom.md">Price breakdown</a>
+    <a class="btn" href="https://github.com/MalcolmGohSG/AssitistiveRobot">Source and CAD</a>
+  </p>
+
+  <h2>More views</h2>
+  <div class="grid">
+    <figure><img loading="lazy" src="renders/side_with_table.png" width="1400" height="1050"
+      alt="Side view: the robot's right arm reaches over a table to place chopsticks; its telescopic mast is visible above the base.">
+      <figcaption>Reaching to the table</figcaption></figure>
+    <figure><img loading="lazy" src="renders/rear_guide_handle.png" width="1400" height="1050"
+      alt="Rear view: a rigid handle with a soft teal grip sticks out from the robot's left side for a person walking beside it; a red emergency stop sits on the shoulder.">
+      <figcaption>Guide handle and emergency stop</figcaption></figure>
+    <figure><img loading="lazy" src="renders/face_closeup.png" width="1400" height="1050"
+      alt="Close-up: a screen face with two round eyes and a smile, a camera above it, a light ring at the neck, and yellow, blue and green chest buttons for help, break and finished.">
+      <figcaption>Face, calm light ring, and the help, break and finished buttons</figcaption></figure>
+  </div>
+
+  <h2>Give feedback</h2>
+  <p>Teachers, therapists, parents, people with disabilities and engineers are all welcome. Tell us what would
+  help, what worries you, or what we've got wrong.</p>
+  <p><a class="btn" href="https://github.com/MalcolmGohSG/AssitistiveRobot/issues/new">Leave a suggestion</a>
+     <a class="btn" href="https://github.com/MalcolmGohSG/AssitistiveRobot/issues">See what others said</a></p>
+  <p>Please <strong>don't post photos, videos or personal details of students</strong>, or anything that could
+  identify a child.</p>
+
+  <h2>Firm rules</h2>
+  <ul class="rules">
+    <li>The robot never touches, blocks or restrains a person.</li>
+    <li>Everything runs offline on the robot. No feature depends on a cloud service staying in business.</li>
+    <li>No student data on this site or in the repository.</li>
+    <li>Nobody controls a physical robot through this site.</li>
+  </ul>
+</main>
+
+<footer>
+  <p>This is a concept for discussion, not a product or medical device, and it has not been safety-tested.
+  Code Apache-2.0 · hardware CERN-OHL-P-2.0 · documentation and renders CC BY 4.0.</p>
+</footer>
+</body>
+</html>
